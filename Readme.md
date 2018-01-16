@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Александр Кокорев](https://up.htmlacademy.ru/adaptive/13/user/430697).
-* Наставник: `Неизвестно`.
+* Наставник: `nobody`.
 
 ---
 
