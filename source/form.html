@@ -38,19 +38,19 @@
                 <li class="form__field">
                   <label>
                     Имя:*
-                    <input class="form__input" type="text name="name" placeholder="БАРСИК" minlength="2" maxlength="20" required>
+                    <input class="form__input" type="text" name="name" placeholder="БАРСИК" minlength="2" maxlength="20" required>
                   </label>
                 </li>
                 <li class="form__field">
                   <label>
                     Вес (кг):*
-                    <input class="form__input" type="number" name="weight" placeholder="7" min="1" max="100" value="10" required>
+                    <input class="form__input" type="number" name="weight" placeholder="7" min="1" max="100" required>
                   </label>
                 </li>
                 <li class="form__field">
                   <label>
                     Возраст (лет):
-                    <input class="form__input" type="number" name="age" placeholder="7" min="1" max="100" value="10" required>
+                    <input class="form__input" type="number" name="age" placeholder="7" min="1" max="100" required>
                   </label>
                 </li>
               </ul>
@@ -62,17 +62,20 @@
               <ul class="form__list">
                 <li class="form__field">
                   <label>
-                    <input class="form__radio  visually-hidden" type="radio" name="programm" value="slim" placeholder="Похудение" chkecked>
+                    <input class="form__radio  visually-hidden" type="radio" name="programm" value="slim" checked>
+                    Похудение
                   </label>
                 </li>
                 <li class="form__field">
                   <label>
-                    <input class="form__radio  visually-hidden" type="radio" name="programm" value="pro" placeholder="Набор массы">
+                    <input class="form__radio  visually-hidden" type="radio" name="programm" value="pro">
+                    Набор массы
                   </label>
                 </li>
                 <li class="form__field">
                   <label>
-                    <input class="form__radio  visually-hidden" type="radio" name="programm" value="advice" placeholder="Не знаю (Нужен ваш совет)">
+                    <input class="form__radio  visually-hidden" type="radio" name="programm" value="advice">
+                    Не знаю (Нужен ваш совет)
                   </label>
                 </li>
               </ul>
@@ -83,7 +86,7 @@
             <div class="form__inner">
               <h3 class="form__group-title">Контактные данные (владельца кота)</h3>
               <p class="form__field-title  form__field-title--email">
-                <label class="form__label for="email">E-mail:*</label>
+                <label class="form__label" for="email">E-mail:*</label>
                 <!-- может убрать класс у лейбла? -->
               </p>
               <div class="form__container-input">
@@ -114,7 +117,7 @@
               <ul class="form__list">
                 <li class="form__field">
                   <label>
-                    <input class="form__checkbox  visually-hidden" type="checkbox" name="sugar" chkecked>
+                    <input class="form__checkbox  visually-hidden" type="checkbox" name="sugar" checked>
                     Сахарозаменитель
                   </label>
                 </li>
