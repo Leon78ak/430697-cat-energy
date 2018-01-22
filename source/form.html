@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Кэт энерджи</title>
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">закрыть меню</button>
+        <ul class="site-menu">
+          <li class="site-menu__item">
+            <a href="#"><b>CAT</b>ENERGY</a>
+          </li>
+          <li class="site-menu__item">
+            <a href="index.html">ГЛАВНАЯ</a>
+          </li>
+          <li class="site-menu__item">
+            <a href="#">КАТАЛОГ ПРОДУКЦИИ</a>
+          </li>
+          <li class="site-menu__item">
+            <a href="#">ПОДБОР ПРОГРАММЫ</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+
+      <section class="selection">
+        <h2 class="selection__title">Подбор программы</h2>
+        <p class="selection__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
+
+        <form class="form" action="https://echo.htmlacademy.ru" method="post">
+          <fieldset class="form__group">
+            <div class="form__inner">
+              <ul class="form__list">
+                <li class="form__field">
+                  <label>
+                    Имя:*
+                    <input class="form__input" type="text name="name" placeholder="БАРСИК" minlength="2" maxlength="20" required>
+                  </label>
+                </li>
+                <li class="form__field">
+                  <label>
+                    Вес (кг):*
+                    <input class="form__input" type="number" name="weight" placeholder="7" min="1" max="100" value="10" required>
+                  </label>
+                </li>
+                <li class="form__field">
+                  <label>
+                    Возраст (лет):
+                    <input class="form__input" type="number" name="age" placeholder="7" min="1" max="100" value="10" required>
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+
+          <fieldset class="form__group">
+            <div class="form__inner">
+              <ul class="form__list">
+                <li class="form__field">
+                  <label>
+                    <input class="form__radio  visually-hidden" type="radio" name="programm" value="slim" placeholder="Похудение" chkecked>
+                  </label>
+                </li>
+                <li class="form__field">
+                  <label>
+                    <input class="form__radio  visually-hidden" type="radio" name="programm" value="pro" placeholder="Набор массы">
+                  </label>
+                </li>
+                <li class="form__field">
+                  <label>
+                    <input class="form__radio  visually-hidden" type="radio" name="programm" value="advice" placeholder="Не знаю (Нужен ваш совет)">
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+
+          <fieldset class="form__group">
+            <div class="form__inner">
+              <h3 class="form__group-title">Контактные данные (владельца кота)</h3>
+              <p class="form__field-title  form__field-title--email">
+                <label class="form__label for="email">E-mail:*</label>
+                <!-- может убрать класс у лейбла? -->
+              </p>
+              <div class="form__container-input">
+                <input class="form__input  form__input--email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com" required>
+                <!-- <svg class="form-order__icon" width="24.829px" height="24.333px"><use xlink:href="#icon-phone" fill="currentColor"></use></svg> -->
+              </div>
+
+              <p class="form__field-title  form__field-title--tel">
+                <label class="form__label" for="tel">Телефон:*</label>
+              </p>
+              <div class="form__container-input">
+                <input class="form__input  form__input--tel" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+                <!-- <svg class="form-order__icon" width="32px" height="32px"><use xlink:href="#icon-mail" fill="currentColor"></use></svg> -->
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form__group">
+            <div class="form__inner">
+              <h3 class="form__group-title">Комментарий</h3>
+              <textarea class="form__input  form__input--comment" name="comment" cols="4" rows="5" placeholder="Расскажите обо всех повадках кота"></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="form__group">
+            <div class="form__inner">
+              <h3 class="form__group-title">Дополнительно</h3>
+              <ul class="form__list">
+                <li class="form__field">
+                  <label>
+                    <input class="form__checkbox  visually-hidden" type="checkbox" name="sugar" chkecked>
+                    Сахарозаменитель
+                  </label>
+                </li>
+                <li class="form__field">
+                  <label>
+                    <input class="form__checkbox  visually-hidden" type="checkbox" name="water">
+                    Питьевая вода
+                  </label>
+                </li>
+                <li class="form__field">
+                  <label>
+                    <input class="form__checkbox  visually-hidden" type="checkbox" name="milk">
+                    Молоко
+                  </label>
+                </li>
+                <li class="form__field">
+                  <label>
+                    <input class="form__checkbox  visually-hidden" type="checkbox" name="vitamin">
+                    Витамины
+                  </label>
+                </li>
+              </ul>
+            </div>
+          </fieldset>
+          <button class="btn" type="submit">Отправить заявку</button>
+        </form>
+        <p class="selection__tip">* — Обязательные поля</p>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+
+        <section class="contacts">
+          <h2 class="visually-hidden">Контакты</h2>
+          <b class="contacts__slogan">приглашаем  к сотрудничеству  дилеров!</b>
+          <p class="contacts__text">
+            ул. Большая Конюшенная, д. 19/8 Санкт-Петербург
+          </p>
+          <div class="map  contacts__map">
+            <img src="img/" width="" height="" alt="Офис компании по адресу г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101">
+          </div>
+        </section>
+
+        <a class="page-footer__logo" href="#top-page"><b>CAT</b>ENERGY</a>
+
+        <div class="page-footer__social  social">
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+                <svg class="social__icon" width="21.769px" height="21.334px"><use xlink:href="#icon-insta"></use></svg>
+                <span class="visually-hidden">Мы в Вконтакте</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">
+                <svg class="social__icon" width="14.962px" height="27.718px"><use xlink:href="#icon-fb"></use></svg>
+                <span class="visually-hidden">Мы в Фейсбуке</span>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--vk" href="https://twitter.com/htmlacademy_ru">
+                <svg class="social__icon" width="23.494px" height="20.168px"><use xlink:href="#icon-twitter"></use></svg>
+                <span class="visually-hidden">Мы в Контакте</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="page-footer__copyright  copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="visually-hidden">htmlacademy</span>
+            <svg class="copyright__link-icon" width="50" height="60"><use xlink:href="#icon-htmlacademy"></use></svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+  </body>
+</html>
