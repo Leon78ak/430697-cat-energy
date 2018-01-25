@@ -1,0 +1,36 @@
+.advantages {
+  .inner--mobile();
+}
+
+.advantages__title {
+  .section-title--mobile();
+  margin: 0;
+  margin-bottom: 23px;
+}
+
+.advantages__list {
+  .ul-unstyled();
+}
+
+.advantages__item {
+  display: flex;
+
+  margin-bottom: 36px;
+
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 14px;
+  color: @title-color;
+  line-height: 18px;
+
+  &::before {
+    content: "";
+
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+
+    background-color: @green;
+  }
+
+}

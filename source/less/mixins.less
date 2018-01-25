@@ -1,0 +1,28 @@
+.ul-unstyled {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+
+  list-style: none;
+}
+
+.btn-colored (@link-color, @bg-color) {
+  color: @link-color;
+  background-color: @bg-color;
+
+  &:hover {
+    color: fade(@link-color, 30%);
+  }
+}
+
+.inner--mobile {
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.section-title--mobile {
+  font: inherit;
+  font-size: 36px;
+  color: @title-color;
+  line-height: 60px;
+}
