@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header class="page-header">
@@ -26,22 +27,34 @@
     </header>
 
     <main class="page-main">
-      <h1 class="page-heading">Функциональное питание для котов</h1>
-        <b class="page-heading__slogan">Занялся собой? Займись котом!</b>
-        <a class="btn">подобрать программу</a>
+
+      <article class="top-offer">
+        <div class="top-offer__inner">
+          <h1 class="top-offer__title">Функциональное питание для котов</h1>
+          <p class="top-offer__slogan">Занялся собой? Займись котом!</p>
+          <p class="top-offer__picture">
+            <img class="top-offer__img" src="img/index-can-mobile@1x.png" width="280" height="271" alt="изображение функционального питания" >
+          </p>
+          <a class="btn  btn--green  top-offer__btn  btn--wide">подобрать программу</a>
+        </div>
+      </article>
 
       <section class="categories">
         <h2 class="visually-hidden">категории программ</h2>
         <article class="categorie  categorie--lose-weight">
           <h2 class="categorie__title">Похудение</h2>
           <p class="categorie__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="to-catalog">Каталог Slim</a>
+          <footer class="categorie__footer">
+            <a class="categorie__to-catalog">Каталог Slim</a>
+          </footer>
         </article>
 
         <article class="categorie  categorie--gain-mass">
           <h2 class="categorie__title">Набор массы</h2>
           <p class="categorie__description">Заработать авторитет среди дворовых котов и даже собак?Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="to-catalog">Каталог pro</a>
+          <footer class="categorie__footer">
+            <a class="categorie__to-catalog">Каталог pro</a>
+          </footer>
         </article>
       </section>
 
