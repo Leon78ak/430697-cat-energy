@@ -1,0 +1,38 @@
+.main-nav {
+  position: relative;
+
+  width: 320px;
+}
+
+@media (max-width: @mobile-width-only) {
+  margin: 0 auto
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  z-index: 10;
+
+  width: 22px;
+  height: 23px;
+
+  font-size: 0;
+
+  background-color: transparent;
+  cursor: pointer;
+
+  border: none;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    box-sizing: border-box;
+    width: 516px;
+    padding-left: 78px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+}

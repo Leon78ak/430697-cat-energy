@@ -1,4 +1,23 @@
 .categories {
+  box-sizing: border-box;
   .inner--mobile();
+
+  width: 320px;
   margin-bottom: 22px;
+
+// layout only
+  outline: 1px solid;
 }
+
+@media (min-width: @tablet-width) {
+  .categories {
+    .inner--tablet();
+
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+}
+

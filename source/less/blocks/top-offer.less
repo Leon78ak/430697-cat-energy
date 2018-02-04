@@ -1,12 +1,15 @@
 .top-offer {
-
   width: 320px;
+  margin: 0 auto;
   margin-bottom: 22px;
   padding-top: 30px;
 
   background: url("../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-position: top 0;
+
+// layout only
+  outline: 1px solid;
 }
 
 .top-offer__inner {
@@ -33,4 +36,25 @@
   color: @text-color--white;
   text-align: center;
   text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .top-offer {
+    width: 768px;
+    height: 868px;
+    margin-bottom: 22px;
+    padding-top: 30px;
+
+    background: url("../img/index-background-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top 0;
+  }
+
+  .top-offer__inner {
+    .inner--tablet();
+  }
+}
+
+@media (min-width: @desktop-width) {
+
 }

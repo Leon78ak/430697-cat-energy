@@ -1,0 +1,64 @@
+.results {
+  .inner--mobile();
+
+  padding-top: 20px;
+
+  background-color: @base-color--95;
+}
+
+.results__title {
+  .section-title--mobile();
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.results__description {
+  margin: 0;
+
+  font-family: Arial;
+  font-weight: 400;
+  font-size: 14px;
+  color: @text-color;
+  line-height: 18px;
+}
+
+.results__list {
+  display: flex;
+}
+
+
+.results__sum {
+
+}
+
+@media (min-width: @tablet-width) {
+  .results {
+    padding-top: 51px;
+    background-color: @base-color;
+    border-top-style: 1px soid green;
+  }
+
+  .results__inner {
+    .inner--tablet();
+  }
+
+.results__title {
+  .section-title--tablet();
+    margin: 0;
+    margin-bottom: 56px;
+  }
+
+  .results__description {
+    margin-bottom: 50px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+
+
+}
+
+@media (min-width: @desktop-width) {
+
+}

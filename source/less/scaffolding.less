@@ -7,6 +7,15 @@
     url("fonts/oswaldregular.woff") format("woff");
 }
 
+@font-face {
+  font-weight: 500;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-style: normal;
+
+  src: url("fonts/oswaldmedium.woff2") format(woff2),
+    url("fonts/oswaldmedium.woff") format("woff");
+}
+
 body {
   min-width: 320px;
   margin: 0;
@@ -17,6 +26,8 @@ body {
   line-height: @line-height;
   font-weight: 400;
   color: @text-color;
+
+  background-color: #ffffff;
 }
 
 img {
