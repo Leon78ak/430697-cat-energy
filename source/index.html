@@ -84,31 +84,50 @@
         <div class="results__inner">
           <h2 class="results__title">Живой пример</h2>
           <p class="results__description">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy&nbsp;Slim.
             Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
           </p>
-          <div class="results__stats">
-            <div class="results__value">
-              5 кг
-            </div>
-            <span class="results__field">затрачено времени</span>
+          <div class="results__container">
+            <ul class="results__list">
+              <li class="results__info">
+                <p class="results__definition">
+                  снижение  веса
+                </p>
+                <p class="results__value">5 кг</p>
+              </li>
+              <li class="results__info">
+                <p class="results__definition">
+                  затрачено  времени
+                </p>
+                <p class="results__value">60 дней</p>
+              </li>
+            </ul>
+            <p class="results__total">затраты на&nbsp;питание:<span>15 000 руб.</span></p>
           </div>
-          <p class="results__total">затраты на питание: 15 000 руб.</p>
         </div>
-        <div class="results__view">
-          <p class="results__before">
-            <img class="results__image" src="img/" width="" height="" alt="фото до применения корма">
-          </p>
-          <p class="results__after">
-            <img class="results__image" src="img/" width="" height="" alt="фото после применения корма">
-          </p>
-        </div>
-        <input type="radio" id="toggle-before" name="select" checked>
-        <input type="radio" id="toggle-after" name="select">
-        <div class="results-conrols">
-          <label class="toggle" for="toggle-before">было</label>
-          <label class="toggle" for="toggle-after">стало</label>
-        </div>
+          <div class="results__slider">
+            <div class="results__view">
+              <p class="results__before">
+                <img class="results__image" src="img/before-mobile@1x.png" width="320" height="240" alt="фото до применения корма">
+              </p>
+              <p class="results__after">
+                <img class="results__image" src="img/after-mobile@1x.png" width="320" height="240" alt="фото после применения корма">
+              </p>
+            </div>
+            <div class="results__controls">
+              <button class="results__toggle  results__toggle--before">было</button>
+              <button class="results__toggle  results__toggle--after">стало</button>
+              <div class="results__filter  range-filter">
+                <div class="range-filter__range-controls">
+                  <div class="range-filter__range-scale">
+                    <div class="range-filter__range-bar" style=""></div>
+                  </div>
+                  <div class="range-filter__range-toggle" tabindex="0"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
       </section>
 
     </main>
