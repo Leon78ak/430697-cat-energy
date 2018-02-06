@@ -1,0 +1,56 @@
+.range-filter {
+  box-sizing: border-box;
+  width: 84px;
+  height: 14px;
+
+  padding: 3px 5px;
+
+  background-color: #ffffff;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+}
+
+.range-filter__range-scale {
+  width: 50%;
+  height: 6px;
+
+  background-color: @green;
+  border-radius: 6px;
+}
+
+@media (min-width: @tablet-width) {
+  .range-filter {
+    width: 428px;
+    height: 6px;
+
+    background-color: #dcdcdc;
+    border: 0;
+  }
+
+  .range-filter__range-scale {
+    display: none;
+  }
+
+  .range-filter__range-controls {
+    position: relative;
+  }
+
+  .range-filter__range-toggle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+
+    width: 8px;
+    height: 8px;
+
+    background-color: @green;
+    border: 13px solid @base-color;
+    border-radius: 50%;
+    box-shadow: 0 0 0 1px #cdcdcd;
+
+    transform: translate(-50%, -50%);
+
+  }
+}
