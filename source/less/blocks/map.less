@@ -1,5 +1,7 @@
 .map {
   position: relative;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .map iframe {
@@ -16,9 +18,23 @@
 
 
 .map img {
-  position: absolute;
+  // position: absolute;
   top: 0;
   left: 0;
 
   display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .map {
+    width: 100%;
+  }
+
+  .map img {
+    width: 768px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
 }

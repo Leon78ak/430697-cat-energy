@@ -8,10 +8,13 @@
 
 .page-header__logo {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 
   padding-top: 13px;
+  padding-right: 105px;
   padding-bottom: 14px;
+  padding-left: 20px;
 
   font-weight: 400;
   font-size: 20px;
@@ -20,15 +23,11 @@
   text-decoration: none;
 
   border-bottom: 1px solid @base-color--90;
-
-  b {
-    margin-right: 6px;
-  }
 }
 
-.page-header__logo-image {
-  margin-right: 56px;
-  margin-left: 20px;
+.page-header__logo-title {
+    width: 101px;
+    height: 18px;
 }
 
 @media (min-width: @tablet-width) {
@@ -37,21 +36,28 @@
     flex-direction: row;
     width: @tablet-width;
     padding: 0 30px;
-    padding-top: 26px;
+    padding-top: 24px;
 
     .page-header__inner {
       display: flex;
+      align-items: center;
     }
 
     .page-header__logo {
       width: 192px;
+      padding: 0;
 
       border: 0;
     }
 
     .page-header__logo-image {
-      margin-left: 0;
+      display: none;
     }
+
+    .page-header__logo-title {
+    width: 172px;
+    height: 57px;
+  }
   }
 }
 

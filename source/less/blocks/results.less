@@ -262,6 +262,9 @@
 
     z-index: 1;
 
+    flex-direction: row;
+    flex-wrap: wrap;
+
     &::before {
       content: "";
 
@@ -297,10 +300,33 @@
     display: flex;
     justify-content: center;
 
-    width: 708px;
     margin-right: auto;
     margin-bottom: 12px;
     margin-left: auto;
+  }
+
+  .results__before {
+    transform: translateX(50%);
+  }
+
+  .results__after {
+    position: relative;
+
+    display: block;
+
+
+    // &::before {
+    //   content: "";
+
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+
+    //   width: 50%;
+    //   height: 100%;
+
+    //   background-color: green;
+    // }
   }
 
   .results__filter {
@@ -309,6 +335,12 @@
 
   .results__toggle {
     font-size: 20px;
+  }
+
+  .results__controls {
+    margin-right: auto;
+    margin-bottom: 67px;
+    margin-left: auto;
   }
 }
 
