@@ -7,7 +7,7 @@
 
 }
 
-.site-menu__link {
+.site-menu a {
   display: block;
 
   padding-top: 27px;
@@ -24,7 +24,7 @@
   cursor: pointer;
 }
 
-.site-menu__link  {
+.site-menu a[href] {
   &:hover,
   &:focus {
     color: lighten(@base-color--7, 40%);
@@ -59,12 +59,10 @@
       height: 2px;
 
       background-color: @green;
-
-
     }
   }
 
-  .site-menu__link {
+  .site-menu a {
     padding: 0;
     padding-top: 10px;
     padding-bottom: 10px;

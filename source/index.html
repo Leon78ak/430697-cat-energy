@@ -19,17 +19,17 @@
           </picture>
         </a>
 
-      <nav class="main-nav">
+      <nav class="main-nav  main-nav--closed  main-nav--no-js">
         <button class="main-nav__toggle" type="button">закрыть меню</button>
         <ul class="site-menu">
           <li class="site-menu__item  site-menu__item--current">
-            <a class="site-menu__link">ГЛАВНАЯ</a>
+            <a>ГЛАВНАЯ</a>
           </li>
           <li class="site-menu__item">
-            <a class="site-menu__link" href="catalog.html">КАТАЛОГ ПРОДУКЦИИ</a>
+            <a href="catalog.html">КАТАЛОГ ПРОДУКЦИИ</a>
           </li>
           <li class="site-menu__item">
-            <a class="site-menu__link" href="form.html">ПОДБОР ПРОГРАММЫ</a>
+            <a href="form.html">ПОДБОР ПРОГРАММЫ</a>
           </li>
         </ul>
       </nav>
@@ -58,7 +58,10 @@
         <h2 class="visually-hidden">категории программ</h2>
         <article class="categorie  categorie--lose-weight">
           <div class="categorie__inner">
-            <h2 class="categorie__title">Похудение</h2>
+            <h2 class="categorie__title">
+              <span class="categorie__icon  categorie__icon--slim"></span>
+              Похудение
+            </h2>
             <p class="categorie__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
           </div>
           <footer class="categorie__footer">
@@ -68,7 +71,10 @@
 
         <article class="categorie  categorie--gain-mass">
           <div class="categorie__inner">
-            <h2 class="categorie__title">Набор массы</h2>
+            <h2 class="categorie__title">
+              <span class="categorie__icon  categorie__icon--pro"></span>
+              Набор массы
+            </h2>
             <p class="categorie__description">Заработать авторитет среди дворовых котов и даже собак?Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
           </div>
           <footer class="categorie__footer">
@@ -116,36 +122,36 @@
             <p class="results__total">затраты на&nbsp;питание:<span>15 000 руб.</span></p>
           </div>
         </div>
-          <div class="results__slider">
-            <div class="results__view">
-              <p class="results__before">
-                <picture>
-                  <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="img/img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                  <img class="results__image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="фото до применения корма">
-                </picture>
-              </p>
-              <p class="results__after">
-                <picture>
-                  <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-                  <source media="(min-width: 768px)" srcset="img/img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                  <img class="results__image" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="фото после применения корма">
-                </picture>
-              </p>
-            </div>
-            <div class="results__controls">
-              <button class="results__toggle  results__toggle--before">было</button>
-              <button class="results__toggle  results__toggle--after">стало</button>
-              <div class="results__filter  range-filter">
-                <div class="range-filter__range-controls">
-                  <div class="range-filter__range-scale">
-                    <div class="range-filter__range-bar" style=""></div>
-                  </div>
-                  <div class="range-filter__range-toggle" tabindex="0"></div>
+        <div class="results__slider">
+          <div class="results__view">
+            <p class="results__before">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img class="results__image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="фото до применения корма">
+              </picture>
+            </p>
+            <p class="results__after">
+              <picture>
+                <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img class="results__image" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="фото после применения корма">
+              </picture>
+            </p>
+          </div>
+          <div class="results__controls">
+            <button class="results__toggle  results__toggle--before" disabled>было</button>
+            <button class="results__toggle  results__toggle--after">стало</button>
+            <div class="results__filter  range-filter">
+              <div class="range-filter__range-controls">
+                <div class="range-filter__range-scale">
+                  <div class="range-filter__range-bar" style=""></div>
                 </div>
+                <div class="range-filter__range-toggle" tabindex="0"></div>
               </div>
             </div>
           </div>
+        </div>
 
       </section>
 
@@ -255,6 +261,22 @@
         </div>
       </div>
     </footer>
+    <script>
+      var navMain = document.querySelector('.main-nav');
+      var navToggle = document.querySelector('.main-nav__toggle');
 
+      navMain.classList.remove('main-nav--no-js');
+
+      navToggle.addEventListener('click', function() {
+        if (navMain.classList.contains('main-nav--closed')) {
+          navMain.classList.remove('main-nav--closed');
+          navMain.classList.add('main-nav--opened');
+        } else {
+          navMain.classList.add('main-nav--closed');
+          navMain.classList.remove('main-nav--opened');
+        }
+      });
+    </script>
+    <script src="js/slider.js"></script>
   </body>
 </html>

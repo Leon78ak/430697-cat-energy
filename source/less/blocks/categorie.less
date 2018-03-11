@@ -16,19 +16,6 @@
 .categorie__inner {
   display: flex;
   flex-wrap: wrap;
-  align-self: center;
-
-  &::before {
-    content: "";
-    align-items: center;
-
-    width: 50px;
-    height: 50px;
-    margin-right: 20px;
-
-    background-color: @green;
-    border-radius: 50%;
-  }
 }
 
 .categorie__title {
@@ -42,6 +29,42 @@
   line-height: 37px;
   color: @base-color--7;
   text-transform: uppercase;
+}
+
+.categorie__icon {
+  position: relative;
+
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+
+  background-color: @green;
+  border-radius: 50%;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 135%;
+    height: 95%;
+
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    transform: translate(-50%, -50%);
+  }
+}
+
+.categorie__icon--slim::before {
+  top: 45%;
+
+  background-image: url(../img/icon-cat-slim.svg);
+}
+
+.categorie__icon--pro::before {
+  background-image: url(../img/icon-cat-pro.svg);
 }
 
 .categorie__description {
@@ -74,11 +97,41 @@
 }
 
 .categorie__to-catalog {
+  display: flex;
+  align-items: center;
+
   margin-bottom: 23px;
 
   font-size: 16px;
   color: @base-color--7;
   text-transform: uppercase;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+
+    order: 1;
+
+    width: 18px;
+    height: 3px;
+    margin-left: 12px;
+
+    background-color: #3e4242;
+    transition-duration: 300ms;
+  }
+
+  &::after {
+    content: "";
+
+    order: 2;
+
+    border: 6px solid transparent;
+    border-left-color: #3e4242;
+  }
+}
+
+.categorie__to-catalog:hover::before {
+  width: 26px;
 }
 
 
@@ -91,23 +144,7 @@
   }
 
   .categorie__inner {
-
-    &::before {
-      content: none;
-    }
-
-    &::after {
-    content: "";
-    align-items: center;
-
-    width: 200px;
-    height: 200px;
-    margin-top: -42px;
-    margin-left: auto;
-
-    background-color: @green;
-    border-radius: 50%;
-  }
+    position: relative;
   }
 
   .categorie__title {
@@ -119,6 +156,17 @@
     line-height: 37px;
     color: @base-color--7;
     text-transform: uppercase;
+  }
+
+  .categorie__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 200px;
+    height: 200px;
+    margin-right: 0;
+
   }
 
   .categorie__description {
@@ -146,6 +194,10 @@
   .categorie__to-catalog {
     font-size: 20px;
     line-height: 20px;
+
+    &::before {
+      margin-left: 25px;
+    }
   }
 }
 
