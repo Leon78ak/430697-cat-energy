@@ -3,7 +3,11 @@
   margin: 0 auto;
   padding-top: 28px;
 
-  background-color: #ffffff;
+  background-color: @white;
+
+  &--inner-page {
+    background-color: @grey;
+  }
 }
 
 .contacts__container {
@@ -27,6 +31,8 @@
 }
 
 .contacts__text {
+  display: flex;
+  flex-direction: column;
   width: 50%;
   margin: 0;
 
@@ -39,13 +45,12 @@
 
 @media (min-width: @tablet-width) {
   .contacts {
+    width: @tablet-width;
     padding-top: 67px;
-    padding-right: 41px;
-    padding-left: 41px;
   }
 
   .contacts__container {
-    .inner--tablet();
+    padding: 0 71px;
   }
 
   .contacts__slogan {
