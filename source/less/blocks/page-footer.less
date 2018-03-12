@@ -2,9 +2,6 @@
   display: flex;
   flex-direction: column;
 
-  // width: 320px;
-  margin: 0 auto;
-
   background-color: @base-color--95;
 }
 
@@ -54,9 +51,6 @@
 }
 
 @media (min-width: @tablet-width) {
-  .page-footer {
-
-  }
 
   .page-footer__wrapper {
     display: flex;
@@ -94,5 +88,19 @@
 }
 
 @media (min-width: @desktop-width) {
+  .page-footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 
+    width: 1440px;
+    padding: 0 110px;
+    padding-top: 60px;
+  }
+
+  .page-footer__social {
+    width: 33%;
+    margin-right: 23px;
+    margin-left: 23px;
+  }
 }

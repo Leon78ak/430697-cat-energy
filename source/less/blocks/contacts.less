@@ -80,5 +80,34 @@
 }
 
 @media (min-width: @desktop-width) {
+  .contacts {
+    display: flex;
+    align-items: center;
+
+    width: 1440px;
+    padding: 0;
+  }
+
+  .contacts__container {
+    position: absolute;
+    z-index: 20;
+    box-sizing: border-box;
+
+    width: 570px;
+    margin-left: 110px;
+    padding: 60px 75px;
+    padding-right: 0;
+
+    background: @white;
+  }
+
+  .contacts__slogan {
+    margin-bottom: 0;
+  }
+
+  .contacts__text {
+    width: 50%;
+    text-align: left;
+  }
 
 }
