@@ -98,61 +98,62 @@
       </section>
 
       <section class="results">
-        <div class="results__inner">
-          <h2 class="results__title">Живой пример</h2>
-          <p class="results__description">
-            Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy&nbsp;Slim.
-            Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
-          </p>
-          <div class="results__container">
-            <ul class="results__list">
-              <li class="results__info">
-                <p class="results__definition">
-                  снижение  веса
-                </p>
-                <p class="results__value">5 кг</p>
-              </li>
-              <li class="results__info">
-                <p class="results__definition">
-                  затрачено  времени
-                </p>
-                <p class="results__value">60 дней</p>
-              </li>
-            </ul>
-            <p class="results__total">затраты на&nbsp;питание:<span>15 000 руб.</span></p>
-          </div>
-        </div>
-        <div class="results__slider">
-          <div class="results__view">
-            <p class="results__before">
-              <picture>
-                <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-                <img class="results__image" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="фото до применения корма">
-              </picture>
+        <div class="results__wrapper">
+          <div class="results__inner">
+            <h2 class="results__title">Живой пример</h2>
+            <p class="results__description">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy&nbsp;Slim.
+              Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
             </p>
-            <p class="results__after">
-              <picture>
-                <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-                <img class="results__image" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="фото после применения корма">
-              </picture>
-            </p>
+            <div class="results__container">
+              <ul class="results__list">
+                <li class="results__info">
+                  <p class="results__definition">
+                    снижение  веса
+                  </p>
+                  <p class="results__value">5 кг</p>
+                </li>
+                <li class="results__info">
+                  <p class="results__definition">
+                    затрачено  времени
+                  </p>
+                  <p class="results__value">60 дней</p>
+                </li>
+              </ul>
+              <p class="results__total">затраты на&nbsp;питание:<span>15 000 руб.</span></p>
+            </div>
           </div>
-          <div class="results__controls">
-            <button class="results__toggle  results__toggle--before" disabled>было</button>
-            <button class="results__toggle  results__toggle--after">стало</button>
-            <div class="results__filter  range-filter">
-              <div class="range-filter__range-controls">
-                <div class="range-filter__range-scale">
-                  <div class="range-filter__range-bar" style=""></div>
+          <div class="slider">
+            <div class="slider__images">
+              <p class="slider__image  slider__image--before">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                  <img class="slider__pic" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="фото до применения корма">
+                </picture>
+              </p>
+              <p class="slider__image  slider__image--after">
+                <picture>
+                  <source media="(min-width: 1440px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                  <img class="slider__pic" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="фото после применения корма">
+                </picture>
+              </p>
+            </div>
+            <div class="slider__controls">
+              <button class="slider__toggle  slider__toggle--before" disabled>было</button>
+              <button class="slider__toggle  slider__toggle--after">стало</button>
+              <div class="slider__filter  range-filter">
+                <div class="range-filter__range-controls">
+                  <div class="range-filter__range-scale">
+                    <div class="range-filter__range-bar" style=""></div>
+                  </div>
+                  <div class="range-filter__range-toggle" tabindex="0"></div>
                 </div>
-                <div class="range-filter__range-toggle" tabindex="0"></div>
               </div>
             </div>
           </div>
         </div>
-
       </section>
 
     </main>

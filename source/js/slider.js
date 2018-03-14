@@ -1,29 +1,33 @@
 'use strict';
 
-var slider = document.querySelector('.results');
-var resultsBefore = slider.querySelector('.results__before');
-var resultsAfter = slider.querySelector('.results__after');
-var toggleBefore = slider.querySelector('.results__toggle--before');
-var toggleAfter = slider.querySelector('.results__toggle--after');
-var resultsRangeToggle = slider.querySelector('.range-filter__range-toggle');
+var slider = document.querySelector('.slider');
+var slideBefore = slider.querySelector('.slider__image--before');
+var slideAfter = slider.querySelector('.slider__image--after');
+var toggleBefore = slider.querySelector('.slider__toggle--before');
+var toggleAfter = slider.querySelector('.slider__toggle--after');
+var sliderRangeToggle = slider.querySelector('.range-filter__range-toggle');
 var rangeScale = slider.querySelector('.range-filter__range-scale');
 
 
 var showSlide = function (evt) {
   if (evt.target === toggleAfter) {
-    resultsAfter.classList.add('results-show-slide');
+    slideBefore.classList.add('hide-slide');
+    slideAfter.classList.add('show-slide');
+
     rangeScale.classList.add('range-filter--move');
     toggleAfter.disabled = true;
     toggleBefore.disabled = false;
 
-    resultsRangeToggle.style.left = '100%';
+    sliderRangeToggle.style.left = '100%';
   }
   else if (evt.target === toggleBefore) {
-    resultsAfter.classList.remove('results-show-slide');
+    slideBefore.classList.remove('hide-slide');
+    slideAfter.classList.remove('show-slide');
+
     rangeScale.classList.remove('range-filter--move');
     toggleAfter.disabled = false;
     toggleBefore.disabled = true;
-    resultsRangeToggle.style.left = '';
+    sliderRangeToggle.style.left = '';
   }
 };
 
