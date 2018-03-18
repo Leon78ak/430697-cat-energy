@@ -10,8 +10,14 @@
   color: @link-color;
   background-color: @bg-color;
 
-  &:hover {
+  &:hover,
+  &:focus {
+    background-color: saturate(darken(@bg-color, 4%), 3%);
+  }
+
+  &:active {
     color: fade(@link-color, 30%);
+    background-color: saturate(darken(@bg-color, 4%), 3%);
   }
 }
 
