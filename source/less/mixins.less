@@ -31,6 +31,13 @@
   padding: 0 30px;
 }
 
+.page-title--mobile {
+  .section-title--mobile();
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 23px;
+}
+
 .section-title--mobile {
   font: inherit;
   font-size: 36px;
@@ -41,4 +48,30 @@
 .section-title--tablet {
   font-size: 60px;
   line-height: 60px;
+}
+
+
+// Генератор правил для ячейки
+// Возвращает правила для ячейки.
+//
+// Принимает:
+// @column:      1                     - ширина (кол-во колонок для этой ячейки)
+// @columns:     @grid-columns;        - общее количество ячеек на 1 ряд
+// @gutter:      @grid-gutter-width    - промежуток между ячейками
+// @flex-grow:   0                     - индивидуальный flex-grow
+// @flex-shrink: 0                     - индивидуальный flex-shrink
+
+.col(@column; @columns: @grid-columns; @gutter: @grid-gutter-width; @flex-grow: 0; @flex-shrink: 0) {
+  @width: ~"calc((100% / "@columns~" - ("@gutter~" / "@column~")) * "@column~")";
+  flex: @flex-grow @flex-shrink @width;
+  width: @width;
+
+    & when not (@gutter = false) {
+    margin-left: (@gutter / 2);
+    margin-right: (@gutter / 2);
+  }
+}
+
+.make-col(@column; @columns: @grid-columns; @gutter: @grid-gutter-width; @flex-grow: 0; @flex-shrink: 0) {
+  .col(@column; @columns; @gutter; @flex-grow; @flex-shrink);
 }

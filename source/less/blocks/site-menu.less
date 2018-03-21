@@ -1,10 +1,5 @@
 .site-menu {
   .ul-unstyled();
-
-}
-
-.site-menu__item {
-
 }
 
 .site-menu a {
@@ -76,10 +71,16 @@
 }
 
 @media (min-width: @desktop-width) {
-  .site-menu a {
-    font-size: 20px;
-    line-height: 26px;
-    color: @white;
+  .site-menu {
+      a {
+      font-size: 20px;
+      line-height: 26px;
+      color: @white;
+    }
+
+    &--inner-page a {
+      color: @base-color--7;
+    }
   }
 
   .site-menu__item--current {
@@ -87,4 +88,11 @@
       background-color: @white;
     }
   }
+
+  .site-menu--inner-page .site-menu__item--current {
+    &::after {
+      background-color: @green;
+    }
+  }
 }
+
