@@ -11,14 +11,36 @@
 .selection__text {
   width: 90%;
   margin: 0;
+  margin-bottom: 38px;
 
   text-transform: uppercase;
 }
 
 @media (min-width: @tablet-width) {
+  .selection {
+    .inner--tablet();
+    width: @tablet-width;
+  }
 
+  .selection__title {
+    .page-title--tablet();
+  }
+
+  .selection__text {
+
+  }
 }
 
 @media (min-width: @desktop-width) {
+  .selection {
 
+  }
+
+  .selection__title {
+    .page-title--desktop();
+  }
+
+  .selection__text {
+
+  }
 }
