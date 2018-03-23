@@ -45,8 +45,8 @@
         </p>
 
         <form class="form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="form__group">
-            <div class="form__inner">
+          <div class="form__programm-container">
+            <fieldset class="form__group">
               <ul class="form__list  form__list--text">
                 <li class="form__field">
                   <label class="form__unit">
@@ -67,11 +67,9 @@
                   </label>
                 </li>
               </ul>
-            </div>
-          </fieldset>
+            </fieldset>
 
-          <fieldset class="form__group">
-            <div class="form__inner">
+            <fieldset class="form__group">
               <ul class="form__list  form__list--bordered">
                 <li class="form__field  form__field--radio">
                   <label class="form__unit">
@@ -92,33 +90,36 @@
                   </label>
                 </li>
               </ul>
-            </div>
-          </fieldset>
+            </fieldset>
+          </div>
+
 
           <fieldset class="form__group">
             <div class="form__inner">
               <h3 class="form__group-title">
                 <span>Контактные данные (владельца кота)</span>
               </h3>
-              <p class="form__field  form__field--email">
-                <label class="form__unit">
-                  <span class="form__unit-label">E-mail:*</span>
-                  <span class="form__container-input">
-                    <input class="form__input  form__input--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
-                    <!-- <svg class="form-order__icon" width="24.829px" height="24.333px"><use xlink:href="#icon-phone" fill="currentColor"></use></svg> -->
-                  </span>
-                </label>
-              </p>
+              <div class="form__programm-container">
+                <p class="form__field  form__field--email">
+                  <label class="form__unit">
+                    <span class="form__unit-label">E-mail:*</span>
+                    <span class="form__container-input">
+                      <input class="form__input  form__input--email" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+                      <!-- <svg class="form-order__icon" width="24.829px" height="24.333px"><use xlink:href="#icon-phone" fill="currentColor"></use></svg> -->
+                    </span>
+                  </label>
+                </p>
 
-              <p class="form__field  form__field--tel">
-                <label class="form__unit">
-                  <span class="form__unit-label">Телефон:*</span>
-                  <span class="form__container-input">
-                    <input class="form__input  form__input--tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
-                    <!-- <svg class="form-order__icon" width="32px" height="32px"><use xlink:href="#icon-mail" fill="currentColor"></use></svg> -->
-                  </span>
-                </label>
-              </p>
+                <p class="form__field  form__field--tel">
+                  <label class="form__unit">
+                    <span class="form__unit-label">Телефон:*</span>
+                    <span class="form__container-input">
+                      <input class="form__input  form__input--tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+                      <!-- <svg class="form-order__icon" width="32px" height="32px"><use xlink:href="#icon-mail" fill="currentColor"></use></svg> -->
+                    </span>
+                  </label>
+                </p>
+              </div>
             </div>
           </fieldset>
 
@@ -133,10 +134,10 @@
 
           <fieldset class="form__group">
             <div class="form__inner">
-              <h3 class="form__group-title">
+              <h3 class="form__group-title  form__group-title--extra">
                 <span>Дополнительно</span>
               </h3>
-              <ul class="form__list">
+              <ul class="form__list  form__list--extra">
                 <li class="form__field">
                   <label class="form__unit">
                     <input class="form__checkbox  visually-hidden" type="checkbox" name="sugar" checked>

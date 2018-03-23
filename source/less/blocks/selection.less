@@ -13,6 +13,8 @@
   margin: 0;
   margin-bottom: 38px;
 
+  color: @black--13;
+
   text-transform: uppercase;
 }
 
@@ -27,13 +29,20 @@
   }
 
   .selection__text {
+    width: 50%;
+    margin-bottom: 52px;
+    padding-left: 40px;
 
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .selection {
-
+    width: @desktop-width;
+    padding-right: 110px;
+    padding-left: 70px;
   }
 
   .selection__title {
@@ -41,6 +50,7 @@
   }
 
   .selection__text {
-
+    width: 30%;
+    margin-bottom: 68px;
   }
 }
