@@ -55,6 +55,10 @@
 
   border: 1px solid @base-color--90;
 
+  &:focus {
+    outline: 2px solid #444444;
+  }
+
   &--comment {
     display: flex;
     width: 100%;
@@ -62,6 +66,18 @@
     padding-right: 13px;
     padding-left: 13px;
     resize: none;
+  }
+}
+
+.form__input:focus + .form__icon {
+  fill: @green;
+}
+
+.form__input--error {
+  outline: 2px solid #ff8282;
+
+  & + .form__icon {
+    fill: #ff8282
   }
 }
 
@@ -92,6 +108,11 @@
 
     box-shadow: 0 0 0 1px @base-color--90;
   }
+}
+
+.form__unit input[type="radio"]:focus + .form__unit-label--radio::before,
+.form__unit input[type="checkbox"]:focus + .form__unit-label--checkbox::before {
+  box-shadow: 0 0 0 2px #444444;
 }
 
 .form__unit-label--radio::before {
@@ -170,12 +191,29 @@
 }
 
 .form__container-input {
+  position: relative;
+
   display: flex;
   flex-grow: 1;
 }
 
 .form__container-input .form__input {
   padding-right: 35px;
+}
+
+.form__icon {
+  position: absolute;
+
+  top: 50%;
+  transform: translateY(-50%);
+
+  &--mail {
+    right: 15px;
+  }
+
+  &--phone {
+    right: 12px;
+  }
 }
 
 .form__button-inner {
@@ -318,6 +356,16 @@
     padding-right: 50px;
   }
 
+  .form__icon {
+    &--mail {
+      right: 20px;
+    }
+
+    &--phone {
+      right: 16px;
+    }
+  }
+
   .form__button-inner {;
     flex-direction: row;
     flex-wrap: wrap;
@@ -400,14 +448,14 @@
     margin-bottom: 20px;
 
     &--email,
-    &--tel {
+    &--phone {
       width: ~"calc(50% - 80px)";
       margin-right: 40px;
       margin-bottom: 0;
       margin-left: 40px;
     }
 
-    &--tel {
+    &--phone {
       margin-right: 0;
       flex-grow: 1;
     }

@@ -1,5 +1,6 @@
 .social {
-
+  display: flex;
+  justify-content: center;
 }
 
 .social__list {
@@ -11,33 +12,53 @@
 
 .social__item {
   display: flex;
-
-  &--inst {
-    margin: auto;
-  }
 }
-
 
 .social__link {
   display: flex;
+  color: @link-color--iconed;
 
   &--vkontakte {
     margin-left: 74px;
   }
 
   &--inst {
-    margin: auto;
+    margin-right: 40px;
+    margin-left: 37px;
   }
 
   &--facebook {
     margin-right: 82px;
   }
+
+  &:hover,
+  &:focus {
+    color: @green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
+  .social__link--facebook .social__icon {
+    width: 13px;
+    height: 27px;
+  }
 
-}
+  .social__link--vkontakte .social__icon {
+    width: 30px;
+    height: 16px;
+  }
 
-@media (min-width: @desktop-width) {
+  .social__link--inst .social__icon {
+    width: 23px;
+    height: 23px;
+  }
 
+  .social__link--inst {
+    margin-right: 28px;
+    margin-left: 28px;
+  }
 }

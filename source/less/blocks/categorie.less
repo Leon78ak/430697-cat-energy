@@ -128,8 +128,14 @@
   }
 }
 
-.categorie__to-catalog:hover::before {
+.categorie__to-catalog:hover::before,
+.categorie__to-catalog:focus::before, {
   width: 26px;
+}
+
+.categorie__to-catalog:active,
+.categorie__to-catalog:active::before {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {

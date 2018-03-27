@@ -9,7 +9,26 @@
   font-size: 16px;
   color: @text-color;
   text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &--iconed {
+    color: @link-color--iconed;
+  }
 }
+
+.copyright__link:hover + .copyright__link--iconed,
+.copyright__link:focus + .copyright__link--iconed {
+  color: @green;
+}
+
+.copyright__link--iconed:hover,
+.copyright__link--iconed:focus {
+  color: @green;
+}
+
 
 @media (min-width: @tablet-width) {
   .copyright__link:first-child {
