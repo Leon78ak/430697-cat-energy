@@ -110,6 +110,8 @@ gulp.task("build", function(done) {
     "style",
     "script",
     "sprite",
+    "images",
+    "webp",
     "html",
     done
   );
