@@ -17,6 +17,7 @@ var run = require("run-sequence");
 var del = require("del");
 var uglify = require("gulp-uglify");
 var pump = require("pump");
+var deploy = require('gulp-gh-pages');
 
 gulp.task("copy", function() {
   return gulp.src([
@@ -87,6 +88,14 @@ gulp.task("html", function() {
       include()
     ]))
     .pipe(gulp.dest("build"));
+});
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task("deploy", function () {
+  return gulp.src("build")
+    .pipe(deploy())
 });
 
 gulp.task("serve", function() {
