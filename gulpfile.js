@@ -22,8 +22,7 @@ var deploy = require('gulp-gh-pages');
 gulp.task("copy", function() {
   return gulp.src([
     "source/fonts/**/*.{woff,woff2}",
-    "source/img/**",
-    "source/js/**"
+    "source/img/**"
     ], {
       base: "source"
     })
@@ -57,8 +56,8 @@ gulp.task("script", function (cb) {
   ], cb);
 });
 
-gulp.task("images", function() {
-  return gulp.src("source/img/**/*.{png,jpg,svg}")
+gulp.task("images-min", function() {
+  return gulp.src("build/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
@@ -68,13 +67,13 @@ gulp.task("images", function() {
 });
 
 gulp.task("webp", function() {
-  return gulp.src("source/img/**/*.{png,jpg}")
+  return gulp.src("build/img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"));
 });
 
 gulp.task("sprite", function() {
-  return gulp.src("source/img/icon-*.svg")
+  return gulp.src("build/img/icon-*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
@@ -94,7 +93,7 @@ gulp.task("html", function() {
  * Push build to gh-pages
  */
 gulp.task("deploy", function () {
-  return gulp.src("build/")
+  return gulp.src("./build//**/*")
     .pipe(deploy())
 });
 
@@ -118,9 +117,9 @@ gulp.task("build", function(done) {
     "copy",
     "style",
     "script",
+    "images-min",
     "sprite",
     "webp",
-    "images",
     "html",
     done
   );
